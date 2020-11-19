@@ -7,9 +7,9 @@
       <div>
         <h1 class="title">Choose your dream destination...</h1>
         <div class="links">
-          <a v-for="(destination, index) in destinations" :key="index" href="#" class="giant-button">
+          <NuxtLink v-for="(destination, idx) in destinations" :key="idx" class="giant-button" :to="{ name: 'destination-id', params: { id: destination.code } }">
             {{ destination.name }}
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
